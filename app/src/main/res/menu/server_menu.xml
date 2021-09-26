@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/server_nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/home_nav" />
+        <item
+            android:id="@+id/server_nav_categories"
+            android:icon="@drawable/ic_baseline_category_24"
+            android:title="@string/categories_nav" />
+        <item
+            android:id="@+id/server_nav_food"
+            android:icon="@drawable/ic_baseline_food_bank_24"
+            android:title="@string/add_food" />
+
+    </group>
+    <item android:title="@string/shipper_lable">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/server_nav_order"
+                    android:icon="@drawable/ic_baseline_reorder_24"
+                    android:title="@string/server_menu_order" />
+                <item
+                    android:id="@+id/server_shipper"
+                    android:icon="@drawable/ic_baseline_local_shipping_24"
+                    android:title="@string/shipper_nav"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/profile_nav">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/server_nav_profile"
+                    android:icon="@drawable/ic_baseline_portrait_24"
+                    android:title="@string/profile_nav" />
+                <item
+                    android:id="@+id/server_nav_logout"
+                    android:icon="@drawable/ic_baseline_reply_24"
+                    android:title="@string/logout_nav" />
+            </group>
+
+        </menu>
+    </item>
+</menu>

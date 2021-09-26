@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User.DashboardActivity">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/lightWhite"
+        android:theme="@style/navigationTheme"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg006"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_menu_24"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/add_person"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="50dp"
+                android:elevation="6dp"
+                android:onClick="callUserdash"
+                android:src="@drawable/ic_baseline_add_24"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:onClick="callcart"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                app:tint="@color/black" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="231dp"
+                    android:layout_height="46dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/p_and_s_restaurant"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/app_name"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white"
+                    android:elevation="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/search_bar"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_baseline_search_24"
+                        app:tint="@color/black" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:layout_below="@+id/search_bar"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="220dp"
+                        android:layout_height="170dp">
+
+                        <RelativeLayout
+                            android:id="@+id/imagecat"
+                            android:layout_width="215dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/black"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/lunch" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/catname"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/imagecat"
+                            android:text="@string/food_name"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/catname"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_baseline_star_rate_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/catname"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/food_rate" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="220dp"
+                        android:layout_height="170dp">
+
+                        <RelativeLayout
+                            android:id="@+id/imagecat1"
+                            android:layout_width="215dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/black"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/fries3" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/catname1"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/imagecat1"
+                            android:text="@string/food_name"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/catname1"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_baseline_star_rate_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/catname1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/food_rate" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="220dp"
+                        android:layout_height="170dp">
+
+                        <RelativeLayout
+                            android:id="@+id/imagecat2"
+                            android:layout_width="215dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/black"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/lunch" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/catname2"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/imagecat2"
+                            android:text="@string/food_name"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/catname2"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_baseline_star_rate_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/catname2"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/food_rate" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cat">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/release"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="25dp"
+                        android:text="@string/show_all" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/all"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/new_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            app:cardCornerRadius="30dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/fav1" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/new_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginEnd="68dp"
+                            android:layout_toStartOf="@+id/new_image"
+                            android:text="@string/food_name"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/new_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/new_name"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="145dp"
+                            android:text="@string/food_rate"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/sub_fname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/new_rate"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="148dp"
+                            android:text="@string/food_cate"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sub_fname"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:text="@string/cart_btn"
+                            android:textColor="@color/black" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/new_image1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            app:cardCornerRadius="30dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/fav3" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/new_name1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginEnd="68dp"
+                            android:layout_toStartOf="@+id/new_image1"
+                            android:text="@string/food_name"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/new_rate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/new_name1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="145dp"
+                            android:text="@string/food_rate"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/sub_fname1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/new_rate1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="148dp"
+                            android:text="@string/food_cate"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sub_fname1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:text="@string/cart_btn"
+                            android:textColor="@color/black" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/new_image2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            app:cardCornerRadius="30dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sandwich3" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/new_name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginEnd="68dp"
+                            android:layout_toStartOf="@+id/new_image2"
+                            android:text="@string/food_name"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/new_rate2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/new_name2"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="145dp"
+                            android:text="@string/food_rate"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/sub_fname2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/new_rate2"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="148dp"
+                            android:text="@string/food_cate"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sub_fname2"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:text="@string/cart_btn"
+                            android:textColor="@color/black" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

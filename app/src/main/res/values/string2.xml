@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="good_taste">Good Taste</string>
+    <string name="search_bar">Search</string>
+    <string name="food_name">Hollywood Stars Cafe</string>
+    <string name="food_rate">4.9(124 rating)</string>
+    <string name="release">New Restaurant</string>
+    <string name="show_all">Show all</string>
+    <string name="food_cate">Western food</string>
+    <string name="cart_btn">Cart</string>
+    <string name="subcate_topic">Pizza</string>
+    <string name="food_cate_name">Pizza</string>
+    <string name="price">Rs. .00</string>
+    <string name="order_btn">Order</string>
+    <string name="categories_topic">Categories</string>
+    <string name="all_btn">Show all</string>
+    <string name="add_food">Food Item</string>
+    <string name="add_categories_btn">ADD Categories</string>
+    <string name="delete_btn">delete</string>
+    <string name="add_categories_topic">Add categories</string>
+    <string name="add_item_topic">Add Item</string>
+    <string name="categories_name">Pizza</string>
+    <string name="categories_lable_name">Categories Name</string>
+    <string name="choose_image_btn">Choose image</string>
+    <string name="add_btn">Add categories</string>
+
+    <string name="item_name_lable">Item Name</string>
+    <string name="item_des_lable">Item Description</string>
+
+
+    <string name="item_price_lable">Item Price</string>
+    <string name="add_item_btn">Add item</string>
+    <string name="food_cate_name_1">Bugger</string>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home_nav"
+            android:icon="@drawable/ic_baseline_home_24"/>
+        <item
+            android:id="@+id/nav_categories"
+            android:title="@string/categories_nav"
+            android:icon="@drawable/ic_baseline_category_24"/>
+        <item
+            android:id="@+id/nav_support"
+            android:title="@string/support_nav"
+            android:icon="@drawable/ic_baseline_support_agent_24"/>
+        <item
+            android:id="@+id/nav_aboutus"
+            android:title="@string/about_us_nav"
+            android:icon="@drawable/ic_baseline_bookmark_24"/>
+        <item
+            android:id="@+id/nav_setting"
+            android:title="@string/setting_nav"
+            android:icon="@drawable/ic_baseline_settings_24"/>
+    </group>
+    <item android:title="@string/profile_nav">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_login"
+                        android:title="@string/login_nav"
+                        android:icon="@drawable/ic_baseline_login_24"/>
+                    <item
+                        android:id="@+id/nav_profile"
+                        android:title="@string/profile_nav"
+                        android:icon="@drawable/ic_baseline_portrait_24"/>
+                    <item
+                        android:id="@+id/nav_logout"
+                        android:title="@string/logout_nav"
+                        android:icon="@drawable/ic_baseline_reply_24"/>
+                </group>
+
+            </menu>
+        </item>
+    <item android:title="@string/communication_nav">
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_share"
+                    android:title="@string/share_nav"
+                    android:icon="@drawable/ic_baseline_share_24"/>
+                <item
+                    android:id="@+id/nav_rate"
+                    android:title="@string/rate_nav"
+                    android:icon="@drawable/ic_baseline_star_rate_24"/>
+            </group>
+        </menu>
+    </item>
+</menu>

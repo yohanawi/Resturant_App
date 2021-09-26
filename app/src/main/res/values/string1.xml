@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_topic">LOGIN</string>
+    <string name="enter_username">Enter username</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="login_btn">Login</string>
+    <string name="create_account_btn">Create Account</string>
+    <string name="or">=============or=============</string>
+    <string name="create_account_topic">CREATE ACCOUNT</string>
+    <string name="enter_password">Enter password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="facebook_btn">Sign in Facebook</string>
+    <string name="google_btn">Sign in Google</string>
+    <string name="enter_full_name">EnterFullName</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="next_btn">Next</string>
+    <string name="choose_gender">Choose Gender</string>
+    <string name="male_btn">Male</string>
+    <string name="female_btn">Female</string>
+    <string name="other_btn">Other</string>
+    <string name="select_your_age">Select your Age</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="mail_menu">www.p and s restaurant.com</string>
+    <string name="profile_user_name">User Name</string>
+    <string name="balance">123</string>
+    <string name="balance_name">balance</string>
+    <string name="full_name_pro">Full Name</string>
+    <string name="phone_pro">Phone number</string>
+    <string name="phone_number_pro">077 1667878</string>
+    <string name="email_pro">Email address</string>
+    <string name="email_address_pro">User@gmail.com</string>
+    <string name="password_pro">Password</string>
+    <string name="password_con_pro">****************</string>
+    <string name="update_btn">update</string>
+    <string name="home_nav">Home</string>
+    <string name="categories_nav">Categories</string>
+    <string name="support_nav">Support</string>
+    <string name="about_us_nav">About Us</string>
+    <string name="setting_nav">Setting</string>
+    <string name="profile_nav">Profile</string>
+    <string name="login_nav">Login</string>
+    <string name="logout_nav">Logout</string>
+    <string name="communication_nav">Communication</string>
+    <string name="share_nav">Share</string>
+    <string name="rate_nav">Rate</string>
+    <string name="live_chat_des">Live chat with \n our support</string>
+    <string name="start_btn">Start</string>
+    <string name="topic_questions">Frequently asked questions:</string>
+    <string name="q_delivered">My order didn\'t delivered</string>
+    <string name="q_missing_item">My order came with missing item</string>
+    <string name="q_phone_number">Change my phone number</string>
+    <string name="q_delivery_address">Change my delivery address</string>
+    <string name="q_refund_my_order">Can i refund my order</string>
+</resources>

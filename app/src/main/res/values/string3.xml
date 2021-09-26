@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="good">Good Taste</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="p_and_s_restaurant">Good Taste</string>
+    <string name="sign_in_btn">SIGN IN</string>
+    <string name="sign_up_btn">SIGN UP</string>
+    <string name="get_started_btn">Get Started</string>
+    <string name="cart_topic">Cart</string>
+    <string name="item_name">Float Cake Vietnam</string>
+    <string name="item_cate_name">TextView</string>
+    <string name="rate_cart">4.5</string>
+    <string name="quantity_cart">01</string>
+    <string name="cart_price">$5.78</string>
+    <string name="price_cart">00</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="sub_total">Sub total</string>
+    <string name="discount_amount">Discount amount</string>
+    <string name="service_charge">Service charge</string>
+    <string name="net_total">Net Total</string>
+    <string name="tot_price">Rs. .00</string>
+    <string name="radio_btn">All</string>
+    <string name="check_out_btn">Check Out</string>
+    <string name="q_payment_methods">Payment methods</string>
+    <string name="q_payment_method">How do i change payment method</string>
+    <string name="enter_address_txt">Enter address</string>
+    <string name="expiry">Expiry MM/YY</string>
+    <string name="cvv">CVV</string>
+    <string name="save_card">Save my card details for faster payment. Iagree to Tearms and Condition</string>
+    <string name="pay_btn">Pay</string>
+    <string name="success">Success</string>
+    <string name="succes_msg">Give us some times to review your \n request and we will contact you \n soon. Thank you.</string>
+    <string name="cancel_btn">cancel</string>
+    <string name="ok_btn">OK</string>
+    <string name="make_selection_topic">Make Selection</string>
+    <string name="des_payment_method">Select your payment method which you want!!</string>
+    <string name="cash_on_delivery">Cash On Delivery</string>
+    <string name="credit_card">Credit Card</string>
+</resources>

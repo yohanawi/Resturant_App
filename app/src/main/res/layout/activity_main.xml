@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg006"
+    tools:context=".Common.MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="344dp"
+        android:layout_height="383dp"
+        android:layout_marginTop="78dp"
+        android:src="@drawable/good"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/pands"
+        android:layout_width="375dp"
+        android:layout_height="90dp"
+        android:fontFamily="@font/bangers"
+        android:text="@string/good"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/resturant"
+        android:layout_width="375dp"
+        android:layout_height="90dp"
+        android:fontFamily="@font/bangers"
+        android:text="@string/restaurant"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pands" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
