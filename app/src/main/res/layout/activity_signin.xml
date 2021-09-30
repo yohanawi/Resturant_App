@@ -18,6 +18,7 @@
             android:layout_width="75dp"
             android:layout_height="44dp"
             android:padding="5dp"
+            app:color="@color/black"
             android:src="@drawable/ic_baseline_arrow_back_24" />
 
         <TextView
@@ -51,7 +52,6 @@
                 app:startIconTint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/muli"
@@ -76,7 +76,6 @@
                 app:startIconTint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/muli"
@@ -112,6 +111,7 @@
             </RelativeLayout>
 
             <Button
+                android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -149,6 +149,7 @@
                 android:text="@string/facebook_btn" />
 
             <Button
+                android:id="@+id/google_btn"
                 android:layout_width="250dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"

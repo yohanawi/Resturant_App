@@ -1,16 +1,14 @@
 package com.example.resturantapp.Common;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.resturantapp.R;
-import com.example.resturantapp.User.DashboardActivity;
-import com.example.resturantapp.User.UserdashActivity;
 import com.google.android.material.textfield.TextInputLayout;
 import com.hbb20.CountryCodePicker;
 
@@ -36,15 +34,16 @@ public class SignupActivity2 extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignupActivity2.this,SignupActivity1.class);
+                Intent intent = new Intent(SignupActivity2.this, SignupActivity1.class);
                 startActivity(intent);
             }
         });
 
     }
-    public void callVerifyOTP(View view){
 
-        if(!validatePhoneNumber()){
+    public void callVerifyOTP(View view) {
+
+        if (!validatePhoneNumber()) {
             return;
         }
         String _fullName = getIntent().getStringExtra("fullName");
@@ -55,9 +54,9 @@ public class SignupActivity2 extends AppCompatActivity {
         String _gender = getIntent().getStringExtra("gender");
 
         String _getUserEnteredPhoneNumber = phoneNumber.getEditText().getText().toString().trim();
-        String _phoneNo = "+"+countryCodePicker.getFullNumber()+_getUserEnteredPhoneNumber;
+        String _phoneNo = "+" + countryCodePicker.getFullNumber() + _getUserEnteredPhoneNumber;
 
-        Intent intent = new Intent(getApplicationContext(),OtpActivity.class);
+        Intent intent = new Intent(getApplicationContext(), OtpActivity.class);
 
         intent.putExtra("fullName", _fullName);
         intent.putExtra("Email", _email);
@@ -70,6 +69,7 @@ public class SignupActivity2 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //validation
     private boolean validatePhoneNumber() {
         //Get complete phone number
         String _getUserEnteredPhoneNumber = phoneNumber.getEditText().getText().toString().trim();

@@ -1,7 +1,5 @@
 package com.example.resturantapp.Common;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +10,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.resturantapp.R;
-import com.example.resturantapp.User.UserdashActivity;
 
 import java.util.Calendar;
 
@@ -40,15 +39,16 @@ public class SignupActivity1 extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignupActivity1.this,SignupActivity.class);
+                Intent intent = new Intent(SignupActivity1.this, SignupActivity.class);
                 startActivity(intent);
             }
         });
 
     }
-    public void call2NextSignupScreen(View view){
 
-        if(!validateGender() | !validateAge()){
+    public void call2NextSignupScreen(View view) {
+
+        if (!validateGender() | !validateAge()) {
             return;
         }
         selectedgender = findViewById(radioGroup.getCheckedRadioButtonId());
@@ -58,29 +58,31 @@ public class SignupActivity1 extends AppCompatActivity {
         int month = age.getMonth();
         int year = age.getYear();
 
-        String _date = day+"/"+month+"/"+year;
+        String _date = day + "/" + month + "/" + year;
 
-        Intent intent = new Intent(getApplicationContext(),SignupActivity2.class);
+        Intent intent = new Intent(getApplicationContext(), SignupActivity2.class);
         startActivity(intent);
     }
-    private boolean validateGender(){
-        if (radioGroup.getCheckedRadioButtonId() == -1){
+
+    //validation
+    private boolean validateGender() {
+        if (radioGroup.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select Gender", Toast.LENGTH_SHORT).show();
             return false;
         } else {
             return true;
         }
     }
+
     private boolean validateAge() {
         int currentyear = Calendar.getInstance().get(Calendar.YEAR);
         int userAge = age.getYear();
         int isAgeValid = currentyear - userAge;
 
-        if(isAgeValid < 14){
+        if (isAgeValid < 14) {
             Toast.makeText(this, "you are not eligible tp apply", Toast.LENGTH_SHORT).show();
             return false;
-        }
-        else
+        } else
             return true;
     }
 }

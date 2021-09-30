@@ -1,8 +1,5 @@
 package com.example.resturantapp.Common;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,22 +8,24 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.resturantapp.R;
+import com.example.resturantapp.User.DashboardActivity;
 import com.example.resturantapp.User.UserdashActivity;
 import com.example.resturantapp.admin.AdminMainActivity;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Objects;
 
 public class SigninActivity extends AppCompatActivity {
 
     //variable
     TextInputLayout username, password;
     ImageView back;
-    Button create, facebook;
+    Button create, facebook, google, login;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +33,16 @@ public class SigninActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_signin);
 
+        //Hooks
+        firebaseAuth = FirebaseAuth.getInstance();
+
         back = findViewById(R.id.Backbtn);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
+        create = findViewById(R.id.createbtn);
+        facebook = findViewById(R.id.facebook_btn);
+        login = findViewById(R.id.login_btn);
+        google = findViewById(R.id.google_btn);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,9 +51,6 @@ public class SigninActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        create = findViewById(R.id.createbtn);
-        facebook = findViewById(R.id.facebook_btn);
 
         create.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,63 +67,24 @@ public class SigninActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
 
-    public void letTheUserLoggedIn(View view) {
-        if (!validateFields()) {
-            return;
-        }
-        String _username = username.getEditText().getText().toString().trim();
-        String _password = password.getEditText().getText().toString().trim();
-
-        Query checkUser = FirebaseDatabase.getInstance().getReference("Users").orderByChild("userName").equalTo(_username);
-        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    username.setError(null);
-                    username.setErrorEnabled(false);
-
-                    String systemPassword = dataSnapshot.child(_username).child("password").getValue(String.class);
-                    if (systemPassword.equals(_password)) {
-                        password.setError(null);
-                        password.setErrorEnabled(false);
-
-                        String _fullName = dataSnapshot.child(_username).child("fullName").getValue(String.class);
-                        String _email = dataSnapshot.child(_username).child("email").getValue(String.class);
-                        String _phoneNo = dataSnapshot.child(_username).child("phoneNo").getValue(String.class);
-                        String _age = dataSnapshot.child(_username).child("age").getValue(String.class);
-                    } else {
-                        Toast.makeText(SigninActivity.this, "Password dose not exist!", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    Toast.makeText(SigninActivity.this, "Database dose not exist!", Toast.LENGTH_SHORT).show();
-                }
+        login.setOnClickListener(v -> {
+            if(Objects.requireNonNull(username.getEditText()).toString().isEmpty()){
+                username.setError("Email is Missing");
+                return;
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(SigninActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            if (Objects.requireNonNull(password.getEditText()).toString().isEmpty()){
+                password.setError("Password is Missing");
+                return;
             }
+            firebaseAuth.signInWithEmailAndPassword(username.getEditText().toString(),password.getEditText().toString()).addOnSuccessListener(authResult -> {
+                startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+                finish();
+            }).addOnFailureListener(e -> Toast.makeText(SigninActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show());
         });
+
     }
 
-    private boolean validateFields() {
-
-        String val = username.getEditText().getText().toString().trim();
-        String checkspaces = "\\A\\W{1,20}\\z";
-        if (val.isEmpty()){
-            username.setError("Field can not be empty");
-            return false;
-        } else if (val.length() >20){
-            username.setError("Username is too large !");
-            return false;
-        }else {
-            username.setError(null);
-            username.setErrorEnabled(false);
-            return true;
-        }
-    }
     public void callForgetpassword(View view){
         startActivity(new Intent(getApplicationContext(),ForgetpassActivity.class));
     }
