@@ -1,0 +1,38 @@
+{
+  "Category": {
+    "01": {
+      "Name": "Pizza",
+      "Image": "E:\\Resturantapp\\app\\src\\main\\res\\drawable/pizza4"
+    },
+    "02": {
+      "Name": "Bugger",
+      "Image": "E:\\Resturantapp\\app\\src\\main\\res\\drawable/burger1"
+    },
+    "03": {
+      "Name": "Ice cream",
+      "Image": "E:\\Resturantapp\\app\\src\\main\\res\\drawable/icecream1"
+    },
+    "04": {
+      "Name": "Sweets",
+      "Image": "E:\\Resturantapp\\app\\src\\main\\res\\drawable/sweets"
+    },
+    "05": {
+      "Name": "Lunch",
+      "Image": "E:\\Resturantapp\\app\\src\\main\\res\\drawable/ver1"
+    }
+  },
+   "User": {
+    "0778638568": {
+      "Name": "Yohan",
+      "Username": "yoha",
+      "Email": "yohan@gmail.com",
+      "Password": "1234"
+    },
+    "0781667268": {
+      "Name": "Awishka",
+      "Username": "awi",
+      "Email": "awishka@gmail.com",
+      "Password": "5678"
+    }
+  }
+}

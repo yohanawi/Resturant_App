@@ -15,15 +15,15 @@
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_add_item.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_addcategoties.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_admin_main.xml" value="0.176" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_cart.xml" value="0.225" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_cate_sub.xml" value="0.176" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_cart.xml" value="0.264" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_cate_sub.xml" value="0.264" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_categories.xml" value="0.2" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_checkout.xml" value="0.225" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_forgetpass.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_home.xml" value="0.225" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_item.xml" value="0.2" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_item.xml" value="0.264" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_main2.xml" value="0.176" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_main3.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_main4.xml" value="0.2" />
@@ -31,32 +31,34 @@
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_main6.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_main7.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_makeselection.xml" value="0.225" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_maps_tracker.xml" value="0.25416666666666665" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_order.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_orderlayout.xml" value="0.25416666666666665" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_orders.xml" value="0.225" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_orders.xml" value="0.264" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_orderstatus.xml" value="0.25416666666666665" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_otp.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_pop_cate_add.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_pop_item_add.xml" value="0.176" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_pop_shipper.xml" value="0.225" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_pop_shipper.xml" value="0.264" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_setnewpass.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_severpro.xml" value="0.225" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_shipper.xml" value="0.225" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_shipper.xml" value="0.264" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_shipping_maps.xml" value="0.225" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_signin.xml" value="0.225" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_signup.xml" value="0.225" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_signup1.xml" value="0.2" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_signup2.xml" value="0.2" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_signin.xml" value="0.264" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_signup1.xml" value="0.264" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_signup2.xml" value="0.264" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_splash.xml" value="0.24010416666666667" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_successforget.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_support.xml" value="0.2" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_uploadmenu.xml" value="0.225" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_userdash.xml" value="0.2" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_userprofile.xml" value="0.225" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_userdash.xml" value="0.264" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/activity_userprofile.xml" value="0.264" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/custom_dialog.xml" value="0.2" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/dropdown_menu.xml" value="0.264" />
-        <entry key="..\:/Resturantapp/app/src/main/res/layout/header.xml" value="0.225" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/header.xml" value="0.264" />
+        <entry key="..\:/Resturantapp/app/src/main/res/layout/menu_item.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/layout/pop_addcategories.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/menu/dropdown_item.xml" value="0.225" />
         <entry key="..\:/Resturantapp/app/src/main/res/menu/main_menu.xml" value="0.225" />
