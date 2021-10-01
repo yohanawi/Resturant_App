@@ -52,7 +52,7 @@ public class SignupActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(SignupActivity2.this, SignupActivity1.class);
                 startActivity(intent);
             }
-        });
+        });  // back button
 
 
     }
@@ -96,5 +96,5 @@ public class SignupActivity2 extends AppCompatActivity {
 //Complete phone number
         final String _phoneNo = "+" + countryCodePicker.getFullNumber() + _getUserEnteredPhoneNumber;
         return true;
-    }
+    }  //validate phone number
 }

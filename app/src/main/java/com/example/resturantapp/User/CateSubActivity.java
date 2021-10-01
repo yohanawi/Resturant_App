@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.resturantapp.R;
 
 public class CateSubActivity extends AppCompatActivity {
+
+    //variables
     ImageView backbtn;
     Button addbtn;
 
@@ -19,19 +21,24 @@ public class CateSubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cate_sub);
 
+        //Hooks
         addbtn = findViewById(R.id.orderbtn);
         backbtn = findViewById(R.id.backbtn);
+
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 CateSubActivity.super.onBackPressed();
             }
-        });
+        }); //back button
     }
+
     public void callItemorder(View view) {
         Intent intent = new Intent(getApplicationContext(), ItemActivity.class);
         startActivity(intent);
     }
+
     public void calldashboard(View view) {
         Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
         startActivity(intent);

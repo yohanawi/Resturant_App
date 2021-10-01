@@ -1,15 +1,16 @@
 package com.example.resturantapp.User;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.resturantapp.R;
 
 public class SupportActivity extends AppCompatActivity {
-    //veriables
+
+    //variables
     ImageView backbtn;
 
     @Override
@@ -17,10 +18,13 @@ public class SupportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support);
 
+        //Hooks
         backbtn = findViewById(R.id.sup_backbtn);
+
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 SupportActivity.super.onBackPressed();
             }
         });

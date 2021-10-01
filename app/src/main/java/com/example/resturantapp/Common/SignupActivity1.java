@@ -42,7 +42,7 @@ public class SignupActivity1 extends AppCompatActivity {
                 Intent intent = new Intent(SignupActivity1.this, SignupActivity.class);
                 startActivity(intent);
             }
-        });
+        }); // back button
 
     }
 
@@ -62,7 +62,7 @@ public class SignupActivity1 extends AppCompatActivity {
 
         Intent intent = new Intent(getApplicationContext(), SignupActivity2.class);
         startActivity(intent);
-    }
+    } //go to next page
 
     //validation
     private boolean validateGender() {
@@ -72,7 +72,7 @@ public class SignupActivity1 extends AppCompatActivity {
         } else {
             return true;
         }
-    }
+    } //validate gender
 
     private boolean validateAge() {
         int currentyear = Calendar.getInstance().get(Calendar.YEAR);
@@ -84,5 +84,5 @@ public class SignupActivity1 extends AppCompatActivity {
             return false;
         } else
             return true;
-    }
+    } //validate age
 }

@@ -72,7 +72,7 @@ public class SignupActivity extends AppCompatActivity {
             fullName.setErrorEnabled(false);
             return true;
         }
-    }
+    } //validate name
 
     private boolean validateUserName() {
         String val = UserName.getEditText().getText().toString().trim();
@@ -88,7 +88,7 @@ public class SignupActivity extends AppCompatActivity {
             UserName.setErrorEnabled(false);
             return true;
         }
-    }
+    } //validate user name
 
     private boolean validateEmail() {
         String val = Email.getEditText().getText().toString().trim();
@@ -104,7 +104,7 @@ public class SignupActivity extends AppCompatActivity {
             Email.setErrorEnabled(false);
             return true;
         }
-    }
+    } //validate email address
 
     private boolean validatePassword() {
         String val = Password.getEditText().getText().toString().trim();
@@ -122,6 +122,6 @@ public class SignupActivity extends AppCompatActivity {
             Password.setErrorEnabled(false);
             return true;
         }
-    }
+    } //validate password
 
 }

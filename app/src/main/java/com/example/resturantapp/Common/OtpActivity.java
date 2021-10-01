@@ -1,15 +1,12 @@
 package com.example.resturantapp.Common;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.arch.core.executor.TaskExecutor;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chaos.view.PinView;
 import com.example.resturantapp.Database.UserHelperClass;
@@ -30,6 +27,7 @@ import java.util.concurrent.TimeUnit;
 
 public class OtpActivity extends AppCompatActivity {
 
+    //variables
     PinView pinFromUser;
     String codeBySystem;
 

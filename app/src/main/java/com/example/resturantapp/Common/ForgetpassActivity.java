@@ -25,7 +25,7 @@ public class ForgetpassActivity extends AppCompatActivity {
 
         //hooks
         Email = findViewById(R.id.forgetEmail);
-        back_btn = findViewById(R.id.forgetback);
+        back_btn = findViewById(R.id.forget_back);
         next_btn = findViewById(R.id.forgetNext);
 
         back_btn.setOnClickListener(new View.OnClickListener() {

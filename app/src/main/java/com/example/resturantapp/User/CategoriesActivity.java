@@ -28,9 +28,10 @@ public class CategoriesActivity extends AppCompatActivity {
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 CategoriesActivity.super.onBackPressed();
             }
-        });
+        }); //back button
 
     }
 

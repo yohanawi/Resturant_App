@@ -14,6 +14,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class CheckoutActivity extends AppCompatActivity {
 
+    //variable
     Button cash_btn, credit_btn;
     ImageView method_back_btn;
 
@@ -22,10 +23,11 @@ public class CheckoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
+        //Hooks
         method_back_btn = findViewById(R.id.payment_method);
         cash_btn = findViewById(R.id.cash_method);
-
         credit_btn = findViewById(R.id.credit_method);
+
         credit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
