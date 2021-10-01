@@ -12,6 +12,7 @@ import com.example.resturantapp.R;
 
 public class AddItemActivity extends AppCompatActivity {
 
+    //variable
     ImageView Ibackbtn;
     Button addI;
     Button btnDelete;
@@ -21,16 +22,18 @@ public class AddItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
 
+        //Hooks
         addI = findViewById(R.id.add_new_item);
         btnDelete= (Button)findViewById(R.id.delete);
 
         Ibackbtn = findViewById(R.id.add_item_backbtn);
+
         Ibackbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AddItemActivity.super.onBackPressed();
             }
-        });
+        }); //back button
     }
 
     public void calladditem(View view) {

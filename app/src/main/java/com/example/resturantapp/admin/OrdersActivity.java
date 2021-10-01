@@ -13,11 +13,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resturantapp.R;
-import com.example.resturantapp.User.DashboardActivity;
-import com.example.resturantapp.User.UserdashActivity;
 
 public class OrdersActivity extends AppCompatActivity {
 
+    //variable
     String[] items = {"Order Confirmed", "Processing your Order", "Order is Ready to delivery", "Rider is pickup Order", "Rider is near by your place"};
     ImageView backbtn;
     AutoCompleteTextView autoCompleteTextView;
@@ -29,18 +28,19 @@ public class OrdersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orders);
 
+        //Hooks
         autoCompleteTextView = findViewById(R.id.auto_complete_txt);
         adapterItems = new ArrayAdapter<String>(this,R.layout.dropdown_menu,items);
         autoCompleteTextView.setAdapter(adapterItems);
         maps = findViewById(R.id.shipping_map_btn);
-
         backbtn = findViewById(R.id.order_back_btn);
+
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 OrdersActivity.super.onBackPressed();
             }
-        });
+        }); //back button
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

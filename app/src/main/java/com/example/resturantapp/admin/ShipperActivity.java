@@ -11,6 +11,7 @@ import com.example.resturantapp.R;
 
 public class ShipperActivity extends AppCompatActivity {
 
+    //variable
     ImageView Sbackbtn;
 
     @Override
@@ -18,13 +19,15 @@ public class ShipperActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shipper);
 
+        //Hooks
         Sbackbtn = findViewById(R.id.shipper_back_btn);
+
         Sbackbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ShipperActivity.super.onBackPressed();
             }
-        });
+        }); //back button
     }
     public void calladdshipper(View view) {
         Intent intent = new Intent(getApplicationContext(), Pop_shipper_Activity.class);

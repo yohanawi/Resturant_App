@@ -30,6 +30,7 @@ public class AdminMainActivity extends AppCompatActivity implements NavigationVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_main);
+
         //hooks menu
         drawerLayout = findViewById(R.id.drawer_layout);
         server_navigationView = findViewById(R.id.server_navigation_view);

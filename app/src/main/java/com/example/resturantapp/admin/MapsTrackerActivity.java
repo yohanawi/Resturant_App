@@ -14,6 +14,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsTrackerActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    //variables
     private GoogleMap mMap;
 
 
