@@ -12,6 +12,8 @@ import com.example.resturantapp.R;
 import com.example.resturantapp.User.UserdashActivity;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -34,6 +36,10 @@ public class SignupActivity extends AppCompatActivity {
         Email = findViewById(R.id.Remail);
         Password = findViewById(R.id.Repass);
         fAuth = FirebaseAuth.getInstance();
+
+        //Firebase
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference table_user = database.getReference("User");
 
         back_signup.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -62,7 +62,8 @@
             android:backgroundTint="#FBC217"
             android:text="@string/sign_up_btn"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>
 
     <Button

@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/pands"
@@ -25,8 +25,8 @@
         android:fontFamily="@font/bangers"
         android:text="@string/good"
         android:textAlignment="center"
-        android:textSize="48sp"
         android:textColor="@color/black"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +39,8 @@
         android:fontFamily="@font/bangers"
         android:text="@string/restaurant"
         android:textAlignment="center"
-        android:textSize="48sp"
         android:textColor="@color/black"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"

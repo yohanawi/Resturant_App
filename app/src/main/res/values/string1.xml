@@ -2,7 +2,7 @@
 <resources>
 
     <string name="login_topic">LOGIN</string>
-    <string name="enter_username">Enter username</string>
+    <string name="enter_username">Enter phone</string>
     <string name="remember_me">Remember Me</string>
     <string name="login_btn">Login</string>
     <string name="create_account_btn">Create Account</string>

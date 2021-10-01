@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "68930779868",
-    "project_id": "resturant-app-2d24e",
-    "storage_bucket": "resturant-app-2d24e.appspot.com"
+    "project_number": "360867968470",
+    "project_id": "good-taste-9ccff",
+    "storage_bucket": "good-taste-9ccff.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:68930779868:android:36a36d5245274eaea71219",
+        "mobilesdk_app_id": "1:360867968470:android:d689fe088b5103b4a7a077",
         "android_client_info": {
           "package_name": "com.example.resturantapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "68930779868-1usiqbec6knilrtg6fgu0nd5ogf0ogkp.apps.googleusercontent.com",
+          "client_id": "360867968470-l22f30rb3mlpatpjq67uk3v1abpdlti0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.resturantapp",
+            "certificate_hash": "9488c6e3ca7dbf737ab8d835222a7a0d13febf7e"
+          }
+        },
+        {
+          "client_id": "360867968470-enk5n0qmfui4apt15p753r7b8k2f21gm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC8j7dxtEsDya8ejylUqF0Hl9TFlRiEIPU"
+          "current_key": "AIzaSyBF2kNbENav1MBqzLQZIcO02msBMQt0KYU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "68930779868-1usiqbec6knilrtg6fgu0nd5ogf0ogkp.apps.googleusercontent.com",
+              "client_id": "360867968470-enk5n0qmfui4apt15p753r7b8k2f21gm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

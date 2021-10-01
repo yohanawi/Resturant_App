@@ -1,18 +1,18 @@
 package com.example.resturantapp.User;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.resturantapp.Common.SignupActivity1;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.resturantapp.R;
 
 public class CategoriesActivity extends AppCompatActivity {
 
+    //Variable
     ImageView backbtn;
     Button categoriesbtn;
 
@@ -21,14 +21,17 @@ public class CategoriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
 
+        //Hooks
         backbtn = findViewById(R.id.backbtn);
         categoriesbtn = findViewById(R.id.cateP_btn);
+
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 CategoriesActivity.super.onBackPressed();
             }
         });
+
     }
 
     public void callcategoriesbutton(View view) {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.resturantapp">
 
     <!--
@@ -7,7 +8,8 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"
+        tools:ignore="CoarseFineLocation" />
 
     <application
         android:allowBackup="true"
@@ -74,18 +76,6 @@
             android:exported="true" />
         <activity
             android:name=".User.UserprofileActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ex.MainActivity5"
-            android:exported="true" />
-        <activity
-            android:name=".ex.MainActivity4"
-            android:exported="true" />
-        <activity
-            android:name=".ex.MainActivity2"
-            android:exported="true" />
-        <activity
-            android:name=".ex.MainActivity"
             android:exported="true" />
         <activity
             android:name=".User.SupportActivity"

@@ -1,10 +1,5 @@
 package com.example.resturantapp.User;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,12 +7,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-import android.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.resturantapp.Common.SigninActivity;
 import com.example.resturantapp.R;
-import com.example.resturantapp.admin.AdminMainActivity;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -27,6 +27,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     NavigationView navigationView;
     ImageView menuIcon;
     LinearLayout contentView;
+
+    FirebaseDatabase database;
+    DatabaseReference category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
