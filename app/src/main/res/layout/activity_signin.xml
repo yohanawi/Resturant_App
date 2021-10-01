@@ -18,8 +18,9 @@
             android:layout_width="75dp"
             android:layout_height="44dp"
             android:padding="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
             app:color="@color/black"
-            android:src="@drawable/ic_baseline_arrow_back_24" />
+            app:tint="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,14 +39,14 @@
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/username"
+                android:id="@+id/user_phone"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/black_border"
                 android:hint="@string/enter_username"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
-                android:background="@drawable/black_border"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
                 app:startIconDrawable="@drawable/ic_baseline_person_24"
@@ -66,10 +67,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/black_border"
                 android:hint="@string/enter_password"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="password_toggle"
-                android:background="@drawable/black_border"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
                 app:startIconDrawable="@drawable/ic_baseline_lock_24"
@@ -104,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:background="#00000000"
-                    android:onClick="callForgetpassword"
+                    android:onClick="callForgetPassword"
                     android:text="@string/forgot_password"
                     android:textColor="@color/black" />
 
@@ -145,8 +146,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#4E66ED"
-                android:textColor="@color/black"
-                android:text="@string/facebook_btn" />
+                android:text="@string/facebook_btn"
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/google_btn"

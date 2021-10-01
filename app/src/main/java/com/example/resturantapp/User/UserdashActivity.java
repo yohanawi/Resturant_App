@@ -20,7 +20,7 @@ public class UserdashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_userdash);
 
         //Hooks
@@ -31,7 +31,7 @@ public class UserdashActivity extends AppCompatActivity {
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent signin = new Intent(UserdashActivity.this, SigninActivity.class);
+                Intent signin = new Intent(UserdashActivity.this, SigninActivity.class); //Go to next login page
                 startActivity(signin);
             }
         });
@@ -39,15 +39,15 @@ public class UserdashActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserdashActivity.this, SignupActivity.class);
-                startActivity(intent);
+                Intent register = new Intent(UserdashActivity.this, SignupActivity.class); // Go to next Register page
+                startActivity(register);
             }
         });
 
         get.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserdashActivity.this,DashboardActivity.class);
+                Intent intent = new Intent(UserdashActivity.this, DashboardActivity.class);
                 startActivity(intent);
             }
         });
