@@ -27,7 +27,6 @@
     <string name="shipper_nav">Shipper</string>
     <string name="shipper_topic">Shipper</string>
     <string name="add_shipper_btn">Add shipper</string>
-    <string name="shipper_name">Shipper name</string>
     <string name="shipper_id">Shipper ID</string>
     <string name="shipper_password">Shipper Password</string>
     <string name="shipper_phone">Shipper Phone</string>
@@ -47,5 +46,8 @@
     <string name="forget_password_topic">Forget Password</string>
     <string name="des_foroget">provide your account email for which you want to reset your oassword!</string>
     <string name="title_activity_maps_tracker">MapsTrackerActivity</string>
+    <string name="location">location</string>
+
+    <string name="shipper_name">Shipper name</string>
 
 </resources>

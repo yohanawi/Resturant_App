@@ -17,34 +17,56 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginStart="20dp"
-            android:gravity="center"
             android:layout_marginEnd="20dp"
             android:background="#BEE6DC">
 
             <TextView
-                android:id="@+id/nametext"
+                android:id="@+id/name_text"
                 android:layout_width="169dp"
-                android:layout_height="37dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="154dp"
                 android:text="@string/demo_name"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/pricetext"
+                android:id="@+id/phone_text"
                 android:layout_width="169dp"
-                android:layout_height="37dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="36dp"
-                android:text="demo price"
+                android:layout_marginEnd="153dp"
+                android:text="demo phone"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
-            <ImageView
-                android:id="@+id/img1"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="169dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/phone_text"
                 android:layout_alignParentEnd="true"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/ic_launcher" />
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="154dp"
+                android:text="demo id"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="169dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/id_text"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="157dp"
+                android:layout_marginBottom="2dp"
+                android:text="demo location"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
 
         </RelativeLayout>
 
@@ -53,7 +75,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/editicon"
+                android:id="@+id/edit_icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -64,7 +86,7 @@
                 android:textSize="15sp" />
 
             <Button
-                android:id="@+id/deleteicon"
+                android:id="@+id/delete_icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -75,4 +97,5 @@
                 android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

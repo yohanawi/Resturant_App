@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.resturantapp.R;
-import com.example.resturantapp.ViewHolder.model;
-import com.example.resturantapp.adapters.myadapter;
+import com.example.resturantapp.ViewHolder.model1;
+import com.example.resturantapp.adapters.myadapter1;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
@@ -21,7 +21,7 @@ public class AddItemActivity extends AppCompatActivity {
     //variable
     ImageView backbtn;
     RecyclerView rec_view;
-    myadapter adapter;
+    myadapter1 adapter;
     FloatingActionButton fb;
 
     @Override
@@ -41,12 +41,12 @@ public class AddItemActivity extends AppCompatActivity {
         }); //back button
         rec_view.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<model> options =
-                new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Item"), model.class)
+        FirebaseRecyclerOptions<model1> options =
+                new FirebaseRecyclerOptions.Builder<model1>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Item"), model1.class)
                         .build();
 
-        adapter=new myadapter(options);
+        adapter= new myadapter1(options);
         rec_view.setAdapter(adapter);
 
         fb=(FloatingActionButton) findViewById(R.id.i_add);
