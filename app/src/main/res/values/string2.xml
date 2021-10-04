@@ -32,4 +32,7 @@
     <string name="item_price_lable">Item Price</string>
     <string name="add_item_btn">Add item</string>
     <string name="food_cate_name_1">Bugger</string>
+    <string name="image_link">image</string>
+    <string name="food_categories_name">Food Categories name</string>
+    <string name="demo_name">Demo Name</string>
 </resources>

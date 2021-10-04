@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resturantapp.R;
 import com.example.resturantapp.User.UserdashActivity;
+import com.example.resturantapp.ViewHolder.User;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -21,7 +22,7 @@ public class SignupActivity extends AppCompatActivity {
     ImageView back_signup;
     Button next;
     TextInputLayout fullName, UserName, Email, Password;
-    FirebaseAuth fAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +36,8 @@ public class SignupActivity extends AppCompatActivity {
         UserName = findViewById(R.id.userN);
         Email = findViewById(R.id.Remail);
         Password = findViewById(R.id.Repass);
-        fAuth = FirebaseAuth.getInstance();
 
-        //Firebase
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference table_user = database.getReference("User");
+
 
         back_signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +48,7 @@ public class SignupActivity extends AppCompatActivity {
         });
 
     }
+
 
     public void callNextSignupScreen(View view) {
 
@@ -123,5 +122,30 @@ public class SignupActivity extends AppCompatActivity {
             return true;
         }
     } //validate password
+
+    public void process(View view){
+        fullName = (TextInputLayout) findViewById(R.id.fullN);
+        UserName = (TextInputLayout) findViewById(R.id.userN);
+        Email = (TextInputLayout) findViewById(R.id.Remail);
+        Password = (TextInputLayout)findViewById(R.id.Repass);
+
+        String full_name = fullName.getEditText().getText().toString().trim();
+        String username = UserName.getEditText().getText().toString().trim();
+        String email = Email.getEditText().getText().toString().trim();
+        String password = Password.getEditText().getText().toString().trim();
+
+        User obj = new User(full_name, username, email, password);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference node = database.getReference("Users");
+
+        node.child(username).setValue(obj);
+
+        fullName.setError(" ");
+        UserName.setError(" ");
+        Email.setError(" ");
+        Password.setError(" ");
+        Toast.makeText(getApplicationContext(), "Inserted", Toast.LENGTH_SHORT).show();
+    }
 
 }
