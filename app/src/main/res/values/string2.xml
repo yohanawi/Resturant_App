@@ -35,4 +35,7 @@
     <string name="image_link">image</string>
     <string name="food_categories_name">Food Categories name</string>
     <string name="demo_name">Demo Name</string>
+    <string name="food_item_name">Food Item name</string>
+    <string name="food_item_price">Food Item price</string>
+    <string name="food_item_description">Food Item description</string>
 </resources>

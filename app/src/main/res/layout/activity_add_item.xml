@@ -46,136 +46,26 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
 
-        <RelativeLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_view1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/add_new_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:onClick="calladditem"
-                android:text="@string/add_item_btn"
-                android:textColor="@color/black" />
-        </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="230dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
-                android:background="#BEE6DC">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:text="@string/food_cate_name"
-                    android:textSize="30sp" />
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/pizza1" />
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true">
-
-                <Button
-                    android:id="@+id/update"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="#0000"
-                    android:text="@string/update_btn"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-
-                <Button
-                    android:id="@+id/delete"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:background="#0000"
-                    android:text="@string/delete_btn"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="230dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
-                android:background="#BEE6DC">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:text="Ice Cream"
-                    android:textSize="30sp" />
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/sweets" />
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true">
-
-                <Button
-                    android:id="@+id/update1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#0000"
-                    android:text="@string/update_btn"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-
-                <Button
-                    android:id="@+id/delete1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#0000"
-                    android:text="@string/delete_btn"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-            </LinearLayout>
-
-        </RelativeLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/i_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/rec_view"
+            app:srcCompat="@drawable/ic_baseline_add_24" />
     </LinearLayout>
 </ScrollView>

@@ -28,6 +28,7 @@ public class model {
     }
 
     public void setPurl(String purl) {
+
         this.purl = purl;
     }
 }
