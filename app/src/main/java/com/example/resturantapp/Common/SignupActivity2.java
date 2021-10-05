@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resturantapp.R;
-import com.google.android.material.textfield.TextInputLayout;
 import com.hbb20.CountryCodePicker;
 
 public class SignupActivity2 extends AppCompatActivity {
@@ -18,7 +18,7 @@ public class SignupActivity2 extends AppCompatActivity {
     //variable
     ImageView back;
     Button next, login;
-    TextInputLayout fullName, UserName, Email, Password, phoneNumber;
+    EditText phone;
     CountryCodePicker countryCodePicker;
 
 
@@ -32,6 +32,7 @@ public class SignupActivity2 extends AppCompatActivity {
         back = findViewById(R.id.signup_backbtn);
         login = (Button)findViewById(R.id.signup_loginbtn);
         next = (Button)findViewById(R.id.signup_nextbtn);
+        phone = (EditText)findViewById(R.id.phone_number);
         countryCodePicker = (CountryCodePicker) findViewById(R.id.country_code_picker);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -41,10 +42,12 @@ public class SignupActivity2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });  // back button
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                String Phone = phone.getText().toString();
                 Intent intent=new Intent(SignupActivity2.this,OtpActivity.class);
                 intent.putExtra("mobile",countryCodePicker.getFullNumberWithPlus().replace(" ",""));
                 startActivity(intent);
@@ -57,7 +60,7 @@ public class SignupActivity2 extends AppCompatActivity {
     //validation
     private boolean validatePhoneNumber() {
         //Get complete phone number
-        String _getUserEnteredPhoneNumber = phoneNumber.getEditText().getText().toString().trim();
+        String _getUserEnteredPhoneNumber = phone.getText().toString().trim();
 //Remove first zero if entered!
         if (_getUserEnteredPhoneNumber.charAt(0) == '0') {
             _getUserEnteredPhoneNumber = _getUserEnteredPhoneNumber.substring(1);

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +14,8 @@ public class ItemActivity extends AppCompatActivity {
 
     //variable
     ImageView backbtn;
+    TextView value;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class ItemActivity extends AppCompatActivity {
 
         //Hooks
         backbtn = findViewById(R.id.item_backbtn);
+        value = findViewById(R.id.value);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,5 +40,16 @@ public class ItemActivity extends AppCompatActivity {
     public void calldashboard(View view) {
         Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
         startActivity(intent);
+    }
+
+    //count button
+    public void increment(View view){
+        count++;
+        value.setText(""+count);
+    }
+    public void decrement(View view){
+        if(count <= 0) count = 0;
+        else count--;
+        value.setText(""+count);
     }
 }

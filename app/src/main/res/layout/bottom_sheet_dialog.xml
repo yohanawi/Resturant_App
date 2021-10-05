@@ -74,6 +74,7 @@
         android:backgroundTint="#FF9800"
         android:gravity="center"
         android:text="@string/pay_btn"
+        android:onClick="call_card"
         android:textColor="@color/black"
         android:textSize="18sp" />
 

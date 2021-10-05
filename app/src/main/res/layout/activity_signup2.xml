@@ -47,32 +47,18 @@
                 app:ccp_showFullName="true"
                 app:ccp_showNameCode="true" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signup_phone_number"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <EditText
+                android:id="@+id/phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/black_border"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round_edittext"
+                android:drawableStart="@drawable/ic_baseline_phone_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
                 android:hint="@string/phone_number"
-                android:textColorHint="@color/black"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_baseline_phone_24"
-                app:startIconTint="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/muli"
-                    android:inputType="phone"
-                    android:textColor="@color/black">
-
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
-
+                android:padding="10dp"
+                android:inputType="phone"/>
 
         </LinearLayout>
 

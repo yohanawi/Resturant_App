@@ -4,24 +4,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.resturantapp.Database.DBHelper;
 import com.example.resturantapp.R;
 import com.example.resturantapp.User.UserdashActivity;
-import com.example.resturantapp.ViewHolder.User;
-import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivity extends AppCompatActivity {
 
     //variable
     ImageView back_signup;
     Button next;
-    TextInputLayout fullName, UserName, Email, Password;
+    EditText fullName, UserName, Email, Password;
+    DBHelper DB;
 
 
     @Override
@@ -36,7 +35,7 @@ public class SignupActivity extends AppCompatActivity {
         UserName = findViewById(R.id.userN);
         Email = findViewById(R.id.Remail);
         Password = findViewById(R.id.Repass);
-
+        DB = new DBHelper(this);
 
 
         back_signup.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +44,32 @@ public class SignupActivity extends AppCompatActivity {
                 Intent intent = new Intent(SignupActivity.this, UserdashActivity.class);
                 startActivity(intent);
             }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String fullname = fullName.getText().toString();
+                String username = UserName.getText().toString();
+                String email = Email.getText().toString();
+                String password = Password.getText().toString();
+
+                if (!validateFullName() | !validateUserName() | !validateEmail() | !validatePassword())
+
+                    Toast.makeText(SignupActivity.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                else {
+                    Boolean insert = DB.insertData(fullname, username, email, password);
+                    if (insert) {
+                        Toast.makeText(SignupActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), SignupActivity1.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(SignupActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+
         });
 
     }
@@ -62,19 +87,18 @@ public class SignupActivity extends AppCompatActivity {
 
     //validate function
     private boolean validateFullName() {
-        String val = fullName.getEditText().getText().toString().trim();
+        String val = fullName.getText().toString().trim();
         if (val.isEmpty()) {
             fullName.setError("Field can not be empty");
             return false;
         } else {
             fullName.setError(null);
-            fullName.setErrorEnabled(false);
             return true;
         }
     } //validate name
 
     private boolean validateUserName() {
-        String val = UserName.getEditText().getText().toString().trim();
+        String val = UserName.getText().toString().trim();
         String checkspaces = "\\A\\W{1,20}\\z";
         if (val.isEmpty()) {
             UserName.setError("Field can not be empty");
@@ -84,13 +108,12 @@ public class SignupActivity extends AppCompatActivity {
             return false;
         } else {
             UserName.setError(null);
-            UserName.setErrorEnabled(false);
             return true;
         }
     } //validate user name
 
     private boolean validateEmail() {
-        String val = Email.getEditText().getText().toString().trim();
+        String val = Email.getText().toString().trim();
         String checkemail = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         if (val.isEmpty()) {
             Email.setError("Field can not be empty");
@@ -100,13 +123,13 @@ public class SignupActivity extends AppCompatActivity {
             return false;
         } else {
             Email.setError(null);
-            Email.setErrorEnabled(false);
+
             return true;
         }
     } //validate email address
 
     private boolean validatePassword() {
-        String val = Password.getEditText().getText().toString().trim();
+        String val = Password.getText().toString().trim();
         String checkpassword = "^" +
                 "(?=.*[a-zA-Z])" +
                 "(?=.*[@#$%^&+=])" +
@@ -118,34 +141,9 @@ public class SignupActivity extends AppCompatActivity {
             return false;
         } else {
             Password.setError(null);
-            Password.setErrorEnabled(false);
+
             return true;
         }
     } //validate password
-
-    public void process(View view){
-        fullName = (TextInputLayout) findViewById(R.id.fullN);
-        UserName = (TextInputLayout) findViewById(R.id.userN);
-        Email = (TextInputLayout) findViewById(R.id.Remail);
-        Password = (TextInputLayout)findViewById(R.id.Repass);
-
-        String full_name = fullName.getEditText().getText().toString().trim();
-        String username = UserName.getEditText().getText().toString().trim();
-        String email = Email.getEditText().getText().toString().trim();
-        String password = Password.getEditText().getText().toString().trim();
-
-        User obj = new User(full_name, username, email, password);
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference node = database.getReference("Users");
-
-        node.child(username).setValue(obj);
-
-        fullName.setError(" ");
-        UserName.setError(" ");
-        Email.setError(" ");
-        Password.setError(" ");
-        Toast.makeText(getApplicationContext(), "Inserted", Toast.LENGTH_SHORT).show();
-    }
 
 }

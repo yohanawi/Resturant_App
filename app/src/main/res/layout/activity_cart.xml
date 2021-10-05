@@ -64,6 +64,8 @@
 
             <RadioButton
                 android:layout_width="50dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:textColor="@color/black" />
@@ -130,46 +132,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <RelativeLayout
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/item_card"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="5dp">
 
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="15dp"
-                    android:src="@drawable/ic_baseline_arrow_back_ios_24" />
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="45dp"
-                    android:text="@string/quantity_cart"
-                    android:textColor="#272670"
-                    android:textSize="24sp" />
-
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="75dp"
-                    android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="15dp"
-                    android:text="@string/cart_price"
-                    android:textColor="#272670"
-                    android:textSize="24sp" />
-            </RelativeLayout>
         </RelativeLayout>
 
         <LinearLayout

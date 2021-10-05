@@ -40,6 +40,7 @@ public class AddcategotiesActivity extends AppCompatActivity {
             }
         }); //back button
 
+        //recycle view
         rec_view.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
@@ -50,6 +51,7 @@ public class AddcategotiesActivity extends AppCompatActivity {
         adapter=new myadapter(options);
         rec_view.setAdapter(adapter);
 
+        //folt button
         fb=(FloatingActionButton) findViewById(R.id.f_add);
         fb.setOnClickListener(new View.OnClickListener() {
             @Override

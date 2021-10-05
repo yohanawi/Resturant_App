@@ -51,9 +51,11 @@
 
         <TextView
             android:id="@+id/app_name"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="46dp"
+            android:layout_marginLeft="120dp"
             android:fontFamily="@font/muli_black"
+            android:gravity="center"
             android:text="@string/item_topic"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -189,30 +191,38 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp">
 
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="15dp"
-                android:src="@drawable/ic_baseline_arrow_back_ios_24"
-                app:tint="@color/black" />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#0000"
+                android:gravity="center"
+                android:onClick="decrement"
+                android:text="-"
+                android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/value"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="45dp"
-                android:text="@string/quantity"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="0"
                 android:textColor="#272670"
                 android:textSize="24sp" />
 
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="75dp"
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-                app:tint="@color/black" />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="80dp"
+                android:backgroundTint="#0000"
+                android:onClick="increment"
+                android:text="+"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/textView14"

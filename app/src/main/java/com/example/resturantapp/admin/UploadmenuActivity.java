@@ -55,16 +55,14 @@ public class UploadmenuActivity extends AppCompatActivity {
     private boolean validatePhoneNumber() {
         //Get complete phone number
         String val = phone.getText().toString().trim();
-        String checknum = "[0-9] < 10";
+        String checknum = "[0-9]{10}";
         if (val.isEmpty()) {
             phone.setError("Field can not be empty");
             return false;
         } else if (!val.matches(checknum)) {
-            phone.setError("Invalid phone !");
+            phone.setError("valid phone !");
             return false;
-        } else {
-            phone.setError(null);
-            return true;
         }
+        return true;
     }      //validate phone number
 }

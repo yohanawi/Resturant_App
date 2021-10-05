@@ -39,110 +39,59 @@
             android:layout_marginTop="40dp"
             android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
+            <EditText
                 android:id="@+id/fullN"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round_edittext"
+                android:drawableStart="@drawable/ic_baseline_edit_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
                 android:hint="@string/enter_full_name"
-                android:textColorHint="@color/black"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_baseline_edit_24"
-                app:startIconTint="@color/black">
+                android:padding="10dp"
+                android:inputType="text"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/muli"
-                    android:inputType="text"
-                    android:textColor="@color/black">
-
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <EditText
                 android:id="@+id/userN"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round_edittext"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
                 android:hint="@string/user_name"
-                android:textColorHint="@color/black"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_baseline_person_24"
-                app:startIconTint="@color/black">
+                android:padding="10dp"
+                android:inputType="text"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/muli"
-                    android:inputType="text"
-                    android:textColor="@color/black">
-
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <EditText
                 android:id="@+id/Remail"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round_edittext"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
                 android:hint="@string/email"
-                android:textColorHint="@color/black"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_baseline_email_24"
-                app:startIconTint="@color/black">
+                android:padding="10dp"
+                android:inputType="textEmailAddress"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/muli"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/black">
-
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <EditText
                 android:id="@+id/Repass"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round_edittext"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
                 android:hint="@string/password"
-                android:textColorHint="@color/black"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
+                android:padding="10dp"
                 app:passwordToggleEnabled="true"
                 app:passwordToggleTint="@color/black"
-                app:startIconDrawable="@drawable/ic_baseline_lock_24"
-                app:startIconTint="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/muli"
-                    android:inputType="textPassword"
-                    android:textColor="@color/black">
-
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
+                android:inputType="textPassword"/>
 
         </LinearLayout>
 
@@ -164,10 +113,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:onClick="process"
-            android:elevation="5dp"
             android:backgroundTint="#0000"
+            android:elevation="5dp"
             android:fontFamily="@font/muli"
+            android:onClick="process"
             android:text="@string/login_btn"
             android:textColor="@color/black"
             android:transitionName="transition_login_btn" />

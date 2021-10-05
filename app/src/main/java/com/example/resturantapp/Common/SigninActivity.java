@@ -5,26 +5,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.resturantapp.Database.DBHelper;
 import com.example.resturantapp.R;
 import com.example.resturantapp.User.DashboardActivity;
 import com.example.resturantapp.User.UserdashActivity;
 import com.example.resturantapp.admin.AdminMainActivity;
-import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class SigninActivity extends AppCompatActivity {
 
     //variable
-    TextInputLayout phone, password;
+    EditText username, password;
     ImageView back;
     Button create, facebook, google, login;
-    FirebaseAuth firebaseAuth;
+    DBHelper DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +32,10 @@ public class SigninActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signin);
 
         //Hooks
-        firebaseAuth = FirebaseAuth.getInstance();
+        DB = new DBHelper(this);
 
         back = findViewById(R.id.Backbtn);
-        phone = findViewById(R.id.user_phone);
+        username = findViewById(R.id.user_username);
         password = findViewById(R.id.password);
         create = findViewById(R.id.createbtn);
         facebook = findViewById(R.id.facebook_btn);
@@ -62,8 +61,22 @@ public class SigninActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent log = new Intent(SigninActivity.this, DashboardActivity.class); //login button
-                startActivity(log);
+
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
+
+                if(user.equals("")||pass.equals(""))
+                    Toast.makeText(SigninActivity.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                else{
+                    Boolean checkuserpass = DB.checkusernamepassword(user, pass);
+                    if(checkuserpass==true){
+                        Toast.makeText(SigninActivity.this, "Sign in successfull", Toast.LENGTH_SHORT).show();
+                        Intent intent  = new Intent(getApplicationContext(), DashboardActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(SigninActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
 
@@ -74,10 +87,6 @@ public class SigninActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        //Firebase
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference table_user = database.getReference("User");
 
     }
     public void callForgetPassword(View view){

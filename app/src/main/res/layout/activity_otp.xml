@@ -76,6 +76,7 @@
             app:lineColor="@color/colorAccent" />
 
         <Button
+            android:id="@+id/b2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
