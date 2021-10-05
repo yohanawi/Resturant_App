@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.resturantapp.Common.SigninActivity;
 import com.example.resturantapp.Common.SignupActivity;
 import com.example.resturantapp.R;
+import com.example.resturantapp.admin.AdminMainActivity;
 
 public class UserdashActivity extends AppCompatActivity {
 
@@ -34,7 +35,7 @@ public class UserdashActivity extends AppCompatActivity {
                 Intent signin = new Intent(UserdashActivity.this, SigninActivity.class); //Go to next login page
                 startActivity(signin);
             }
-        });
+        });// sign in button
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,14 +43,14 @@ public class UserdashActivity extends AppCompatActivity {
                 Intent register = new Intent(UserdashActivity.this, SignupActivity.class); // Go to next Register page
                 startActivity(register);
             }
-        });
+        });//sign up button
 
         get.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserdashActivity.this, DashboardActivity.class);
+                Intent intent = new Intent(UserdashActivity.this, AdminMainActivity.class);
                 startActivity(intent);
             }
-        });
+        });// admin login button
     }
 }

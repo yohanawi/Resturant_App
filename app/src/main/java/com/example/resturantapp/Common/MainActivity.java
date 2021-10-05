@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static int SPLASH_SCREEN = 5000; //splash time duration
 
-    //veriables
+    //variables
     Animation topAnim, bottomAnim;
     ImageView image;
     TextView PandS, theam;

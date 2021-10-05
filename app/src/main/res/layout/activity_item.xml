@@ -96,9 +96,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:layout_centerVertical="true"
                         android:includeFontPadding="false"
-                        android:text="@string/card_nm"
+                        android:text="@string/rate_cart"
                         android:textSize="20sp" />
 
                     <TextView
@@ -108,7 +107,7 @@
                         android:layout_below="@id/payment_lable"
                         android:layout_centerInParent="true"
                         android:includeFontPadding="false"
-                        android:text="@string/card_name"
+                        android:text="Rating"
                         android:textSize="14sp" />
 
                 </RelativeLayout>
@@ -133,7 +132,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:includeFontPadding="false"
-                        android:text="@string/card_nm"
+                        android:text="150"
                         android:textSize="20sp" />
 
                     <TextView
@@ -149,40 +148,7 @@
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                app:cardBackgroundColor="#fece2f"
-                app:cardElevation="10dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/payment_lable1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:includeFontPadding="false"
-                        android:text="@string/card_nm"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/payment_des1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/payment_lable1"
-                        android:layout_centerInParent="true"
-                        android:includeFontPadding="false"
-                        android:text="@string/card_name"
-                        android:textSize="14sp" />
-
-                </RelativeLayout>
-            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
         <RelativeLayout

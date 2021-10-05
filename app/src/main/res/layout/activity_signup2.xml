@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:elevation="5dp"
-            android:onClick="process"
+            android:background="#0000"
             android:fontFamily="@font/muli"
             android:text="@string/login_btn"
             android:textColor="@color/black"

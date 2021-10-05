@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resturantapp.R;
+import com.example.resturantapp.User.DashboardActivity;
 import com.example.resturantapp.User.UserdashActivity;
 import com.example.resturantapp.admin.AdminMainActivity;
 import com.google.android.material.textfield.TextInputLayout;
@@ -55,6 +56,14 @@ public class SigninActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SigninActivity.this, SignupActivity.class); //create account button
                 startActivity(intent);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent log = new Intent(SigninActivity.this, DashboardActivity.class); //login button
+                startActivity(log);
             }
         });
 

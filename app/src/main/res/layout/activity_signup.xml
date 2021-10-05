@@ -166,6 +166,7 @@
             android:layout_marginTop="20dp"
             android:onClick="process"
             android:elevation="5dp"
+            android:backgroundTint="#0000"
             android:fontFamily="@font/muli"
             android:text="@string/login_btn"
             android:textColor="@color/black"

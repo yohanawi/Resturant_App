@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="400dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg004"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="30dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="94dp"
+            android:fontFamily="@font/muli_black"
+            android:gravity="center"
+            android:text="@string/item_topic"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/D_address"
@@ -13,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@drawable/round_edittext"
-        android:hint="@string/enter_address_txt"
+        android:hint="Enter card number"
         android:padding="10dp" />
 
     <RelativeLayout

@@ -28,6 +28,13 @@ public class CheckoutActivity extends AppCompatActivity {
         cash_btn = findViewById(R.id.cash_method);
         credit_btn = findViewById(R.id.credit_method);
 
+        method_back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CheckoutActivity.super.onBackPressed();
+            }
+        });
+
         credit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,12 +46,12 @@ public class CheckoutActivity extends AppCompatActivity {
         });
 
         cash_btn.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View view) {
-                                            Intent intent = new Intent(CheckoutActivity.this, UploadmenuActivity.class);
-                                            startActivity(intent);
-                                        }
-                                    }
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CheckoutActivity.this, UploadmenuActivity.class);
+                startActivity(intent);
+            }
+        }
         );
     }
 }
