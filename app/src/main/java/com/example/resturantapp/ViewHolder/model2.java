@@ -2,10 +2,6 @@ package com.example.resturantapp.ViewHolder;
 
 public class model2 {
     String name, phone, id, location;
-    model2()
-    {
-
-    }
 
     public model2(String name, String phone, String id, String location) {
         this.name = name;

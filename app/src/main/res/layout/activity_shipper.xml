@@ -63,6 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:layout_marginTop="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/rec_view2"
             app:srcCompat="@drawable/ic_baseline_add_24" />
 

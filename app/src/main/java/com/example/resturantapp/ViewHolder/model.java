@@ -1,11 +1,9 @@
 package com.example.resturantapp.ViewHolder;
 
+import android.net.Uri;
+
 public class model {
     String name,purl;
-    model()
-    {
-
-    }
 
     public model(String name, String purl) {
         this.name = name;
@@ -22,9 +20,9 @@ public class model {
         this.name = name;
     }
 
-    public String getPurl() {
+    public Uri getPurl() {
 
-        return purl;
+        return Uri.parse(purl);
     }
 
     public void setPurl(String purl) {

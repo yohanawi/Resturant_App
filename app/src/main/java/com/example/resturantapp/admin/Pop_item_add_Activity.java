@@ -7,20 +7,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.resturantapp.Database.dbmanager;
 import com.example.resturantapp.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Pop_item_add_Activity extends AppCompatActivity {
 
-    //variable
     //variable
     EditText name, price, description, purl;
     Button add;
@@ -49,36 +42,21 @@ public class Pop_item_add_Activity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                processinsert();
+                processinsert(name.getText().toString(),price.getText().toString(),description.getText().toString(),purl.getText().toString());
             }
         });
     }
 
-    private void processinsert() {
-        Map<String,Object> map=new HashMap<>();
-        map.put("name",name.getText().toString());
-        map.put("price",price.getText().toString());
-        map.put("description",description.getText().toString());
-        map.put("purl",purl.getText().toString());
-        FirebaseDatabase.getInstance().getReference().child("Item").push()
-                .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        name.setText(" ");
-                        price.setText(" ");
-                        description.setText(" ");
-                        purl.setText(" ");
-                        Toast.makeText(getApplicationContext(), "Inserted", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e)
-                    {
-                        Toast.makeText(getApplicationContext(), "Could not Inserted", Toast.LENGTH_SHORT).show();
-                    }
-                });
+    private void processinsert(String n, String P, String d, String p)
+    {
+        String res = new dbmanager(this).addrecord(n,P,d,p);
+        name.setText("");
+        price.setText("");
+        description.setText("");
+        purl.setText("");
+        Toast.makeText(getApplicationContext(),res,Toast.LENGTH_SHORT).show();
+
+
 
     }
 }

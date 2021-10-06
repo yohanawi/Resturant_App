@@ -1,6 +1,7 @@
 package com.example.resturantapp.admin;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,12 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.resturantapp.Database.dbmanager;
 import com.example.resturantapp.R;
 import com.example.resturantapp.ViewHolder.model1;
 import com.example.resturantapp.adapters.myadapter1;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class AddItemActivity extends AppCompatActivity {
 
@@ -23,6 +25,7 @@ public class AddItemActivity extends AppCompatActivity {
     RecyclerView rec_view;
     myadapter1 adapter;
     FloatingActionButton fb;
+    ArrayList<model1> dataholder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,7 @@ public class AddItemActivity extends AppCompatActivity {
         //Hooks
         backbtn = findViewById(R.id.add_item_backbtn);
         rec_view=(RecyclerView) findViewById(R.id.rec_view1);
+        rec_view.setLayoutManager(new LinearLayoutManager(this));
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,12 +45,16 @@ public class AddItemActivity extends AppCompatActivity {
         }); //back button
         rec_view.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<model1> options =
-                new FirebaseRecyclerOptions.Builder<model1>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Item"), model1.class)
-                        .build();
+        Cursor cursor=new dbmanager(this).readalldata();
+        dataholder=new ArrayList<>();
 
-        adapter= new myadapter1(options);
+        while(cursor.moveToNext())
+        {
+            model1 obj=new model1(cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4));
+            dataholder.add(obj);
+        }
+
+        adapter= new myadapter1(dataholder);
         rec_view.setAdapter(adapter);
 
         fb=(FloatingActionButton) findViewById(R.id.i_add);
@@ -55,17 +63,6 @@ public class AddItemActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Pop_item_add_Activity.class));
             }
-        });
-    }
-
-    @Override
-    protected void onStart(){
-        super.onStart();
-        adapter.startListening();
-    }
-    @Override
-    protected void onStop(){
-        super.onStop();
-        adapter.stopListening();
+        }); //new add button
     }
 }

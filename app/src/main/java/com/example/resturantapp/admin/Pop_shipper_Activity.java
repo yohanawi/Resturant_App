@@ -7,16 +7,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.resturantapp.Database.dbmanager;
 import com.example.resturantapp.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Pop_shipper_Activity extends AppCompatActivity {
 
@@ -48,36 +42,17 @@ public class Pop_shipper_Activity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                processinsert();
+                processinsert(name.getText().toString(),phone.getText().toString(),id.getText().toString(),location.getText().toString());
             }
         });
     }
-
-    private void processinsert() {
-        Map<String,Object> map=new HashMap<>();
-        map.put("name",name.getText().toString());
-        map.put("phone",phone.getText().toString());
-        map.put("id",id.getText().toString());
-        map.put("location",location.getText().toString());
-        FirebaseDatabase.getInstance().getReference().child("Shipper").push()
-                .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        name.setText(" ");
-                        phone.setText(" ");
-                        id.setText(" ");
-                        location.setText(" ");
-                        Toast.makeText(getApplicationContext(), "Inserted", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e)
-                    {
-                        Toast.makeText(getApplicationContext(), "Could not Inserted", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
+    private void processinsert(String n, String p, String i, String l)
+    {
+        String res = new dbmanager(this).addrecord(n,p,i,l);
+        name.setText(" ");
+        phone.setText(" ");
+        id.setText(" ");
+        location.setText(" ");
+        Toast.makeText(getApplicationContext(),res,Toast.LENGTH_SHORT).show();
     }
 }

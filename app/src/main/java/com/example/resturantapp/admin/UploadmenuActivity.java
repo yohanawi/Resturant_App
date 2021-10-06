@@ -6,10 +6,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resturantapp.ConfoirmActivity;
+import com.example.resturantapp.Database.DBdelivery;
 import com.example.resturantapp.R;
 
 public class UploadmenuActivity extends AppCompatActivity {
@@ -18,6 +20,7 @@ public class UploadmenuActivity extends AppCompatActivity {
     Button confirm;
     ImageView cash_back;
     EditText address, city, city_code, phone;
+    DBdelivery DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class UploadmenuActivity extends AppCompatActivity {
         city = (EditText)findViewById(R.id.cash_city);
         city_code = (EditText)findViewById(R.id.cash_citycode);
         phone = (EditText)findViewById(R.id.cash_phone);
+        DB = new DBdelivery(this);
 
 
 
@@ -40,6 +44,29 @@ public class UploadmenuActivity extends AppCompatActivity {
                 UploadmenuActivity.super.onBackPressed();
             }
         }); //back button
+
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String Address = address.getText().toString();
+                String City = city.getText().toString();
+                String citycode = city_code.getText().toString();
+                String Phone = phone.getText().toString();
+
+                if(!validatePhoneNumber())
+                    Toast.makeText(UploadmenuActivity.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                else {
+                    Boolean insert = DB.insertData(citycode, Address, City, Phone);
+                    if (insert) {
+                        Toast.makeText(UploadmenuActivity.this, "inserted successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), ConfoirmActivity.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(UploadmenuActivity.this, "inserted failed", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
     }
     public void callcon(View view) {
 
